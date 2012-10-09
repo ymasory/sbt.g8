@@ -1,5 +1,5 @@
 /* basic project info */
-name := "$name__snake$"
+name := "$name;format=hyphen$"
 
 organization := "$organization$"
 
@@ -71,17 +71,17 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-  <url>https://github.com/$github_username$/$name__snake$</url>
+  <url>https://github.com/$github_username$/$github_project$</url>
   <licenses>
     <license>
       <name>LICENSE NAME</name>
-      <url>https://github.com/$github_username$/$name__snake$/blob/master/LICENSE</url>
+      <url>https://github.com/$github_username$/$github_project$/blob/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
   <scm>
-    <url>git@github.com:$github_username$/$name__snake$.git</url>
-    <connection>scm:git:git@github.com:$github_username$/$name__snake$.git</connection>
+    <url>git@github.com:$github_username$/$github_project$.git</url>
+    <connection>scm:git:git@github.com:$github_username$/$github_project$.git</connection>
   </scm>
   <developers>
     <developer>
