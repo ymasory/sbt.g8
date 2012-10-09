@@ -34,14 +34,6 @@ libraryDependencies ++= Seq (
   // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
 )
 
-/* improve REPL */
-// initialCommands in console :=
-//   """|import scalaz._
-//      |import Scalaz._
-//      |import com.example._
-//      |println("scalaz 7 loaded!")
-//      |""".stripMargin
-
 /* you may need these repos */
 resolvers ++= Seq(
   // Resolvers.sonatypeRepo("snapshots")
