@@ -5,9 +5,9 @@ organization := "$project_group_id$"
 
 version := "$project_version$"
 
-description := "$project_description$"
+// description := "this project can foo a bar!"
 
-homepage := Some( url("$project_homepage$"))
+homepage := Some( url("https://github.com/$project_github_repo$"))
 
 // organizationName := "My Company"
 
@@ -77,7 +77,7 @@ pomExtra := (
   <url>https://github.com/$project_github_repo$</url>
   <licenses>
     <license>
-      <name>LICENSE NAME</name>
+      <name>$project_license_name$</name>
       <url>https://github.com/$project_github_repo$/blob/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
