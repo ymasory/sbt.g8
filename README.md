@@ -1,4 +1,13 @@
-# This giter8 template is where I start all my scala projects. #
+# giter8 template for projects using GitHub #
+
+## Template features ##
+
+- Integration with your GitHub repo and account.
+- Release section in generated `build.sbt` complies with Sonatype policies for Maven Central Syncing.
+- [sbt-assembly](https://github.com/sbt/sbt-assembly) plugin integrated, for the creation of a single executable jar of your project.
+- Informative `README.md` automatically generated.
+- Reasonable `scalac` and `javac` options chosen.
+- Optional settings provided commented out in generated `build.sbt`.
 
 ## Use this template ##
 
@@ -33,8 +42,7 @@ $ sbt
 > g8-test # must result in SUCCESS
 > exit
 $ cd target/sbt-test/default-*/scripted
-$ sbt
-$ run
+$ java -jar target/*-assembly-*.jar # must print "hello sbt.g8"
 ```
 
 - If you like your new template, push it to GitHub.
