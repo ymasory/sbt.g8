@@ -21,9 +21,9 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
 /* entry point */
-mainClass in (Compile, packageBin) := Some("$project_group_id$$project_artifact_id$.Main")
+mainClass in (Compile, packageBin) := Some("$project_group_id$.$project_artifact_id$.Main")
 
-mainClass in (Compile, run) := Some("$project_group_id$$project_artifact_id$.Main")
+mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Main")
 
 /* dependencies */
 libraryDependencies ++= Seq (
