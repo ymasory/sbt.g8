@@ -1,4 +1,4 @@
-# $name$ #
+# $name$ — $project_description$ #
 
 ## Build & run ##
 
@@ -8,5 +8,7 @@
 > run
 ```
 
-## TODO ##
-* Fill in the `LICENSE` file the text of our program's license.
+## Contact ##
+
+- $developer_full_name$
+- <a href="$developer_email$">$developer_email$</a>

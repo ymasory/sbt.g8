@@ -70,7 +70,7 @@ pomExtra := (
   <licenses>
     <license>
       <name>$project_license_name$</name>
-      <url>https://github.com/$project_github_repo$/blob/master/LICENSE</url>
+      <url>$project_license_url$</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
