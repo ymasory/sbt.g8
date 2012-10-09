@@ -1,5 +1,5 @@
 /* basic project info */
-name := "$name;format=hyphen$"
+name := "$project_artifact_id$"
 
 organization := "$project_group_id$"
 
