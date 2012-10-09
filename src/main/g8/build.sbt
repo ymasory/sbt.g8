@@ -5,7 +5,7 @@ organization := "$project_group_id$"
 
 version := "$project_version$"
 
-// description := "this project can foo a bar!"
+description := "$project_description$"
 
 homepage := Some( url("https://github.com/$project_github_repo$"))
 
@@ -80,9 +80,10 @@ pomExtra := (
   </scm>
   <developers>
     <developer>
+      <id>$developer_handle$</id>
       <name>$developer_full_name$</name>
       <email>$developer_email$</email>
-      <url>$developer_homepage$</url>
+      // <url>$developer_homepage$</url>
     </developer>
   </developers>
 )
