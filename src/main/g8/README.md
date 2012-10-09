@@ -3,7 +3,7 @@
 ## Build & run ##
 
 ```sh
-\$ cd $name;format=hypen$
+\$ cd $name;format="hyphen"$
 \$ ./sbt
 > run
 ```
