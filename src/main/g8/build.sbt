@@ -1,7 +1,7 @@
 /* basic project info */
 name := "$name;format=hyphen$"
 
-organization := "$organization$"
+organization := "$project_group_id$"
 
 version := "$project_version$"
 
@@ -21,9 +21,9 @@ scalacOptions ++= Seq("-deprecation", "-unchecked")
 javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
 /* entry point */
-mainClass in (Compile, packageBin) := Some("$project_package$.Main")
+mainClass in (Compile, packageBin) := Some("$project_group_id$$project_artifact_id$.Main")
 
-mainClass in (Compile, run) := Some("$project_package$.Main")
+mainClass in (Compile, run) := Some("$project_group_id$$project_artifact_id$.Main")
 
 /* dependencies */
 libraryDependencies ++= Seq (
@@ -71,22 +71,21 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-  <url>https://github.com/$github_username$/$github_project$</url>
+  <url>https://github.com/$project_github_repo$</url>
   <licenses>
     <license>
       <name>LICENSE NAME</name>
-      <url>https://github.com/$github_username$/$github_project$/blob/master/LICENSE</url>
+      <url>https://github.com/$project_github_repo$/blob/master/LICENSE</url>
       <distribution>repo</distribution>
     </license>
   </licenses>
   <scm>
-    <url>git@github.com:$github_username$/$github_project$.git</url>
-    <connection>scm:git:git@github.com:$github_username$/$github_project$.git</connection>
+    <url>git@github.com:$project_github_repo$.git</url>
+    <connection>scm:git:git@github.com:$project_github_repo$.git</connection>
   </scm>
   <developers>
     <developer>
-      <id>$developer_handle$</id>
-      <name>$developer_name$</name>
+      <name>$developer_full_name$</name>
       <email>$developer_email$</email>
       <url>$developer_homepage$</url>
     </developer>
