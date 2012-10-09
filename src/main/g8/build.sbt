@@ -14,7 +14,9 @@ homepage := Some( url("$project_homepage$"))
 /* scala versions and options */
 scalaVersion := "2.9.2"
 
-crossScalaVersions := Seq("2.9.1")
+// crossScalaVersions := Seq("2.9.1")
+
+offline := false
 
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
@@ -27,27 +29,28 @@ mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Ma
 
 /* dependencies */
 libraryDependencies ++= Seq (
-  "org.scalaz" %% "scalaz-core" % "7.0.0-M2",
-  "org.scalaz" %% "scalaz-effect" % "7.0.0-M2",
-  "org.scalacheck" %% "scalacheck" % "1.9" % "test"
+  // "org.scalaz" %% "scalaz-core" % "7.0.0-M3",
+  // "org.scalaz" %% "scalaz-effect" % "7.0.0-M3",
+  // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
 )
 
 /* improve REPL */
-initialCommands in console :=
-  """|import scalaz._
-     |import Scalaz._
-     |import com.example._
-     |println("scalaz 7 loaded!")
-     |""".stripMargin
+// initialCommands in console :=
+//   """|import scalaz._
+//      |import Scalaz._
+//      |import com.example._
+//      |println("scalaz 7 loaded!")
+//      |""".stripMargin
 
 /* you may need these repos */
 resolvers ++= Seq(
-  // "sonatype snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
-  // "sonatype releases" at "https://oss.sonatype.org/content/repositories/releases",
-  // Classpaths.typesafeResolver,
-  // Classpaths.typesafeSnapshots,
-  // JavaNet1Repository,
+  // Resolvers.sonatypeRepo("snapshots")
+  // Resolvers.typesafeIvyRepo("snapshots")
+  // Resolvers.typesafeIvyRepo("releases")
+  // Resolvers.typesafeRepo("releases")
+  // Resolvers.typesafeRepo("snapshots")
   // JavaNet2Repository,
+  // JavaNet1Repository
 )
 
 /* sbt behavior */
