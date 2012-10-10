@@ -9,6 +9,8 @@ description := "$project_description$"
 
 homepage := Some( url("https://github.com/$project_github_repo$"))
 
+startYear := Some(2012)
+
 // organizationName := "My Company"
 
 /* scala versions and options */
