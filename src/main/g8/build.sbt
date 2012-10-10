@@ -85,7 +85,7 @@ pomExtra := (
       <id>$developer_handle$</id>
       <name>$developer_full_name$</name>
       <email>$developer_email$</email>
-      // <url>$developer_homepage$</url>
+      <!-- <url>$developer_homepage$</url> -->
     </developer>
   </developers>
 )
