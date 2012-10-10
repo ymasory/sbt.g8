@@ -7,12 +7,20 @@ version := "$project_version$"
 
 description := "$project_description$"
 
-homepage := Some( url("https://github.com/$project_github_repo$"))
+homepage := Some(url("https://github.com/$github_username$/$github_repo_name$"))
 
 startYear := Some(2012)
 
 licenses := Seq(
   ("$project_license_name$", url("$project_license_url$"))
+)
+
+scmInfo := Some(
+  ScmInfo(
+    url("https://github.com/$github_username$/$github_repo_name$"),
+    "scm:git:https://github.com/$github_username$/$github_repo_name$.git",
+    Some("scm:git:git@github.com:$github_username$/$github_repo_name$.git")
+  )
 )
 
 // organizationName := "My Company"
@@ -72,11 +80,6 @@ publishArtifact in Test := false
 pomIncludeRepository := { _ => false }
 
 pomExtra := (
-  <url>https://github.com/$project_github_repo$</url>
-  <scm>
-    <url>git@github.com:$project_github_repo$.git</url>
-    <connection>scm:git:git@github.com:$project_github_repo$.git</connection>
-  </scm>
   <developers>
     <developer>
       <id>$developer_handle$</id>
