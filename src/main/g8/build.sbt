@@ -11,6 +11,10 @@ homepage := Some( url("https://github.com/$project_github_repo$"))
 
 startYear := Some(2012)
 
+licenses := Seq(
+  ("$project_license_name$", url("$project_license_url$"))
+)
+
 // organizationName := "My Company"
 
 /* scala versions and options */
@@ -69,13 +73,6 @@ pomIncludeRepository := { _ => false }
 
 pomExtra := (
   <url>https://github.com/$project_github_repo$</url>
-  <licenses>
-    <license>
-      <name>$project_license_name$</name>
-      <url>$project_license_url$</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
   <scm>
     <url>git@github.com:$project_github_repo$.git</url>
     <connection>scm:git:git@github.com:$project_github_repo$.git</connection>
