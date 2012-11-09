@@ -43,18 +43,44 @@ mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Ma
 
 /* dependencies */
 libraryDependencies ++= Seq (
-  // "org.scalaz" %% "scalaz-core" % "7.0.0-M3",
-  // "org.scalaz" %% "scalaz-effect" % "7.0.0-M3",
-  // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+  // -- utility --
+  // "org.apache.commons" % "commons-lang3" % "3.1",
+  // "com.google.guava" % "guava" % "13.0.1",
+  // "commons-io" % "commons-io" % "2.4",
+  // "org.scalaz" %% "scalaz-core" % "7.0.0-M4",
+  // "org.scalaz" %% "scalaz-effect" % "7.0.0-M4",
+
+  // -- logging etc --
+  // "org.clapper" %% "grizzled-slf4j" % "1.0.1",
+  // "ch.qos.logback" % "logback-classic" % "1.0.7",
+  // "com.typesafe" % "config" % "1.0.0"
+
+  // -- persistence & serialization --
+  // "org.json4s" %% "json4s-native" % "3.0.0",
+  // "com.novus" %% "salat" % "1.9.2-SNAPSHOT",
+  // "com.typesafe.akka" % "akka-actor" % "2.0.3",
+  // "com.h2database" % "h2" % "1.2.127",
+  // "mysql" % "mysql-connector-java" % "5.1.10",
+
+  // -- concurrency --
+  // "com.typesafe.akka" % "akka-actor" % "2.0.3",
+
+  // -- network --
+  //  "net.databinder.dispatch" %% "dispatch-core" % "0.9.2"
+
+  // -- testing --
+  // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test",
+  // "org.specs2" %% "specs2" % "1.12.2" % "test",
+  // "org.scalatest" %% "scalatest" % "2.0.M4" % "test"
 )
 
 /* you may need these repos */
 resolvers ++= Seq(
-  // Resolvers.sonatypeRepo("snapshots")
-  // Resolvers.typesafeIvyRepo("snapshots")
-  // Resolvers.typesafeIvyRepo("releases")
-  // Resolvers.typesafeRepo("releases")
-  // Resolvers.typesafeRepo("snapshots")
+  // Resolver.sonatypeRepo("snapshots")
+  // Resolver.typesafeIvyRepo("snapshots")
+  // Resolver.typesafeIvyRepo("releases")
+  // Resolver.typesafeRepo("releases")
+  // Resolver.typesafeRepo("snapshots")
   // JavaNet2Repository,
   // JavaNet1Repository
 )
