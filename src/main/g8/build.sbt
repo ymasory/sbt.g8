@@ -44,11 +44,11 @@ mainClass in (Compile, packageBin) := Some("$project_group_id$.$project_artifact
 mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Main")
 
 /* continuations */
-//autoCompilerPlugins := true
+// autoCompilerPlugins := true
 
-//addCompilerPlugin("org.scala-lang.plugins" % "continuations" % "2.9.2")
+// addCompilerPlugin("org.scala-lang.plugins" % "continuations" % "2.9.2")
 
-//scalacOptions += "-P:continuations:enable"
+// scalacOptions += "-P:continuations:enable"
 
 /* dependencies */
 libraryDependencies ++= Seq (
@@ -70,7 +70,7 @@ libraryDependencies ++= Seq (
   // -- logging & configuration --
   // "org.clapper" %% "grizzled-slf4j" % "1.0.1",
   // "ch.qos.logback" % "logback-classic" % "1.0.7",
-  // "com.typesafe" % "config" % "1.0.0"
+  // "com.typesafe" % "config" % "1.0.0", //(also included in akka-actor)
 
   // -- persistence & serialization --
   // "org.json4s" %% "json4s-native" % "3.0.0",
@@ -84,7 +84,7 @@ libraryDependencies ++= Seq (
   // "org.scala-stm" %% "scala-stm" % "0.6",
 
   // -- network --
-  //  "net.databinder.dispatch" %% "dispatch-core" % "0.9.2"
+  //  "net.databinder.dispatch" %% "dispatch-core" % "0.9.2",
 
   // -- testing --
   // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test",
