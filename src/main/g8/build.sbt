@@ -43,11 +43,9 @@ mainClass in (Compile, packageBin) := Some("$project_group_id$.$project_artifact
 
 mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Main")
 
-/* continuations */
+// CONTINUATIONS
 // autoCompilerPlugins := true
-
 // addCompilerPlugin("org.scala-lang.plugins" % "continuations" % "2.9.2")
-
 // scalacOptions += "-P:continuations:enable"
 
 /* dependencies */
@@ -56,36 +54,30 @@ libraryDependencies ++= Seq (
   // "org.apache.commons" % "commons-lang3" % "3.1",
   // "org.scalaz" %% "scalaz-core" % "7.0.0-M4",
   // "org.scalaz" %% "scalaz-effect" % "7.0.0-M4",
-
+  // "joda-time" % "joda-time" % "2.1",
   // -- collections --
   // "org.scalaj" %% "scalaj-collection" % "1.2",
   // "com.google.guava" % "guava" % "13.0.1",
   // "com.chuusai" %% "shapeless" % "1.2.2",
-
   // -- io --
   // "commons-io" % "commons-io" % "2.4",
   // "com.github.scala-incubator.io" %% "scala-io-core" % "0.4.1-seq",
   // "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.1-seq",
-
   // -- logging & configuration --
-  // "org.clapper" %% "grizzled-slf4j" % "1.0.1",
+  // "org.clapper" %% "grizzled-slf4j" % "0.6.10",
   // "ch.qos.logback" % "logback-classic" % "1.0.7",
   // "com.typesafe" % "config" % "1.0.0", //(also included in akka-actor)
-
   // -- persistence & serialization --
   // "org.json4s" %% "json4s-native" % "3.0.0",
   // "com.novus" %% "salat" % "1.9.2-SNAPSHOT",
   // "com.typesafe.akka" % "akka-actor" % "2.0.3",
   // "com.h2database" % "h2" % "1.2.127",
   // "mysql" % "mysql-connector-java" % "5.1.10",
-
   // -- concurrency --
   // "com.typesafe.akka" % "akka-actor" % "2.0.3",
   // "org.scala-stm" %% "scala-stm" % "0.6",
-
   // -- network --
   //  "net.databinder.dispatch" %% "dispatch-core" % "0.9.2",
-
   // -- testing --
   // "org.scalacheck" %% "scalacheck" % "1.10.0" % "test",
   // "org.specs2" %% "specs2" % "1.12.2" % "test",
