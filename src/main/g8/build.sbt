@@ -64,8 +64,8 @@ libraryDependencies ++= Seq (
   // "com.github.scala-incubator.io" %% "scala-io-file" % "0.4.1-seq",
   // -- logging & configuration --
   // "org.clapper" %% "grizzled-slf4j" % "0.6.10",
-  // "ch.qos.logback" % "logback-classic" % "1.0.7",
-  // "com.typesafe" % "config" % "1.0.0", //(also included in akka-actor)
+  // "ch.qos.logback" % "logback-classic" % "1.0.7" % "provided",
+  // "com.typesafe" % "config" % "1.0.0",
   // -- persistence & serialization --
   // "org.json4s" %% "json4s-native" % "3.0.0",
   // "com.novus" %% "salat" % "1.9.2-SNAPSHOT",
