@@ -56,7 +56,6 @@ libraryDependencies ++= Seq (
   // "org.scalaz" %% "scalaz-effect" % "7.0.0-M4",
   // "joda-time" % "joda-time" % "2.1",
   // -- collections --
-  // "org.scalaj" %% "scalaj-collection" % "1.2",
   // "com.google.guava" % "guava" % "13.0.1",
   // "com.chuusai" %% "shapeless" % "1.2.2",
   // -- io --
