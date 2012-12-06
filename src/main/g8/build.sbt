@@ -95,7 +95,6 @@ resolvers ++= Seq(
 )
 
 // ivyXML := <dependencies>
-//             <exclude module="grizzled-slf4j_2.9.2" />
 //             <exclude module="logback-classic" />
 //           </dependencies>
 
