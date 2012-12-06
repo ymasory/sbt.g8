@@ -100,10 +100,9 @@ resolvers ++= Seq(
 //           </dependencies>
 
 /* testing */
+parallelExecution in Test := false
 
 // testOptions += Tests.Argument(TestFrameworks.Specs2, "console", "junitxml")
-
-// parallelExecution in Test := false
 
 // parallelExecution in Global := false //no parallelism between subprojects
 
