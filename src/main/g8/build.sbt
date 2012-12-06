@@ -94,6 +94,19 @@ resolvers ++= Seq(
   // JavaNet1Repository
 )
 
+// ivyXML := <dependencies>
+//             <exclude module="grizzled-slf4j_2.9.2" />
+//             <exclude module="logback-classic" />
+//           </dependencies>
+
+/* testing */
+
+// testOptions += Tests.Argument(TestFrameworks.Specs2, "console", "junitxml")
+
+// parallelExecution in Test := false
+
+// parallelExecution in Global := false //no parallelism between subprojects
+
 /* sbt behavior */
 logLevel in compile := Level.Warn
 
@@ -108,9 +121,19 @@ publishTo <<= version { (v: String) =>
     "snapshots" at nexus + "content/repositories/snapshots"
   )
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
-                      }
+}
+
+mappings in (Compile, packageBin) ~= { (ms: Seq[(File, String)]) =>
+  ms filter { case (file, toPath) =>
+      toPath != "application.conf"
+  }
+}
 
 publishArtifact in Test := false
+
+// publishArtifact in (Compile, packageDoc) := false
+
+// publishArtifact in (Compile, packageSrc) := false
 
 pomIncludeRepository := { _ => false }
 
