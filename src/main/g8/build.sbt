@@ -9,7 +9,7 @@ description := "$project_description$"
 
 homepage := Some(url("https://github.com/$github_username$/$github_repo_name$"))
 
-startYear := Some(2012)
+startYear := Some(2013)
 
 licenses := Seq(
   ("$project_license_name$", url("$project_license_url$"))
@@ -26,13 +26,17 @@ scmInfo := Some(
 // organizationName := "My Company"
 
 /* scala versions and options */
-scalaVersion := "2.9.2"
+scalaVersion := "2.10.0"
 
 // crossScalaVersions := Seq("2.9.1")
 
 offline := false
 
-scalacOptions ++= Seq("-deprecation", "-unchecked")
+scalacOptions ++= Seq(
+  "-feature",
+  "-deprecation",
+  "-unchecked"
+)
 
 // scalacOptions ++= Seq("-Ydependent-method-types") // if using shapeless
 
