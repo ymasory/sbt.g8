@@ -162,7 +162,7 @@ pomExtra := (
 )
 
 // Josh Suereth's step-by-step guide to publishing on sonatype
-// httpcom://www.scala-sbt.org/using_sonatype.html
+// http://www.scala-sbt.org/using_sonatype.html
 
 /* assembly plugin */
 mainClass in AssemblyKeys.assembly := Some("$project_group_id$.$project_artifact_id$.Main")
