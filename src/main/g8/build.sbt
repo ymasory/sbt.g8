@@ -34,6 +34,13 @@ offline := false
 
 scalacOptions ++= Seq(
   "-feature",
+  // "-language:postfixOps",
+  // "-language:reflectiveCalls",
+  // "-language:implicitConversions",
+  // "-language:higherKinds",
+  // "-language:existentials",
+  // "-language:experimental.macros",
+  // "-language:experimental.dynamics",
   "-deprecation",
   "-unchecked"
 )
