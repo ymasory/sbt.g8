@@ -28,22 +28,45 @@ scmInfo := Some(
 /* scala versions and options */
 scalaVersion := "2.10.0"
 
-// crossScalaVersions := Seq("2.9.1")
+crossScalaVersions := Seq(
+  "2.9.3-RC1",
+  "2.9.2",
+  "2.9.1", "2.9.1-1",
+  "2.9.0", "2.9.0-1"
+  // "2.8.0", "2.8.1", "2.8.2"
+)
 
-offline := false
+// These options will be used for *all* versions.
+scalacOptions ++= Seq(
+  "-deprecation",
+  "-unchecked",
+  "-encoding", "UTF-8"
+  // "-Xcheckinit" // for debugging only, see https://github.com/paulp/scala-faq/wiki/Initialization-Order
+  // "-optimise"   // this option will slow your build
+)
 
 scalacOptions ++= Seq(
-  "-feature",
-  // "-language:postfixOps",
-  // "-language:reflectiveCalls",
-  // "-language:implicitConversions",
-  // "-language:higherKinds",
-  // "-language:existentials",
-  // "-language:experimental.macros",
-  // "-language:experimental.dynamics",
-  "-deprecation",
-  "-unchecked"
+  "-Yclosure-elim",
+  "-Yinline"
 )
+
+// These language flags will be used only for 2.10.x.
+// Uncomment those you need, or if you hate SIP-18, all of them.
+scalacOptions <++= scalaVersion map { sv =>
+  if (sv startsWith "2.10") List(
+    "-Xverify",
+    "-Ywarn-all",
+    "-feature"
+    // "-language:postfixOps",
+    // "-language:reflectiveCalls",
+    // "-language:implicitConversions"
+    // "-language:higherKinds",
+    // "-language:existentials",
+    // "-language:experimental.macros",
+    // "-language:experimental.dynamics"
+  )
+  else Nil
+}
 
 javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
@@ -131,6 +154,8 @@ parallelExecution in Test := false
 logLevel in compile := Level.Warn
 
 traceLevel := 5
+
+offline := false
 
 /* publishing */
 publishMavenStyle := true
