@@ -1,4 +1,4 @@
-package $project_group_id$.$project_artifact_id$
+package $project_group_id$."$name;format="snake"$"
 
 object Main extends App {
   println("hello sbt.g8")

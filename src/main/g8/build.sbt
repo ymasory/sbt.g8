@@ -1,5 +1,5 @@
 /* basic project info */
-name := "$project_artifact_id$"
+name := "$name;format="norm"$"
 
 organization := "$project_group_id$"
 
@@ -7,7 +7,7 @@ version := "0.1.0-SNAPSHOT"
 
 // description := "this project can foo a bar!"
 
-homepage := Some(url("https://github.com/$github_username$/$project_artifact_id$"))
+homepage := Some(url("https://github.com/$github_username$/$name;format="norm"$"))
 
 startYear := Some(2013)
 
@@ -17,9 +17,9 @@ licenses := Seq(
 
 scmInfo := Some(
   ScmInfo(
-    url("https://github.com/$github_username$/$project_artifact_id$"),
-    "scm:git:https://github.com/$github_username$/$project_artifact_id$.git",
-    Some("scm:git:git@github.com:$github_username$/$project_artifact_id$.git")
+    url("https://github.com/$github_username$/$name;format="norm"$"),
+    "scm:git:https://github.com/$github_username$/$name;format="norm"$.git",
+    Some("scm:git:git@github.com:$github_username$/$name;format="norm"$.git")
   )
 )
 
@@ -71,9 +71,9 @@ scalacOptions <++= scalaVersion map { sv =>
 javacOptions ++= Seq("-Xlint:unchecked", "-Xlint:deprecation")
 
 /* entry point */
-mainClass in (Compile, packageBin) := Some("$project_group_id$.$project_artifact_id$.Main")
+mainClass in (Compile, packageBin) := Some("$project_group_id$.$name;format="snake"$.Main")
 
-mainClass in (Compile, run) := Some("$project_group_id$.$project_artifact_id$.Main")
+mainClass in (Compile, run) := Some("$project_group_id$.$name;format="snake"$.Main")
 
 // CONTINUATIONS
 // autoCompilerPlugins := true
@@ -197,7 +197,7 @@ pomExtra := (
 // http://www.scala-sbt.org/using_sonatype.html
 
 /* assembly plugin */
-mainClass in AssemblyKeys.assembly := Some("$project_group_id$.$project_artifact_id$.Main")
+mainClass in AssemblyKeys.assembly := Some("$project_group_id$.$name;format="snake"$.Main")
 
 assemblySettings
 
