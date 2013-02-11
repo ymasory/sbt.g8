@@ -1,9 +1,9 @@
-# $name$ — $project_description$ #
+# $project_artifact_id$ #
 
 ## Build & run ##
 
 ```sh
-\$ cd $name;format="hyphen"$
+\$ cd $project_artifact_id;format="hyphen"$
 \$ ./sbt
 > run
 ```
