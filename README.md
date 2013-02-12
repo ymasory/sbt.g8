@@ -20,8 +20,9 @@
 ```sh
 $ g8 ymasory/sbt
 $ cd <name-of-app>
+$ chmod u+x sbt
 $ ./sbt
-> run
+> +run
 ```
 
 ## Modify this template ##
