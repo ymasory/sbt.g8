@@ -6,7 +6,7 @@
 \$ cd $name;format="norm"$
 \$ chmod u+x sbt
 \$ ./sbt
-> run
+> +run
 ```
 
 ## Contact ##
