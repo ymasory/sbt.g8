@@ -1,5 +1,7 @@
 package $project_group_id$.$name;format="snake"$
 
-object Main extends App {
-  println("hello sbt.g8")
+object Main {
+  def main(args: Array[String]) {
+    println("hello sbt.g8")
+  }
 }
