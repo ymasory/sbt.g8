@@ -10,7 +10,7 @@
 - Informative `README.md` automatically generated.
 - Reasonable `scalac` and `javac` options chosen.
 - Optional settings provided commented out in generated `build.sbt`.
-- Cross-compilation for all Scala versions 2.9.0 and higher. Optional support for 2.8.x.
+- Cross-compilation for all Scala versions 2.8.0 and higher.
 
 ## Use this template ##
 
