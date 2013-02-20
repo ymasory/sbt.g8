@@ -1,4 +1,4 @@
-# "$name;format="norm"$" #
+# $name;format="norm"$ #
 
 ## Build & run ##
 

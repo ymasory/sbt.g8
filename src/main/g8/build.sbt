@@ -136,7 +136,6 @@ resolvers ++= Seq(
   // Resolver.typesafeRepo("snapshots")
   // JavaNet2Repository,
   // JavaNet1Repository,
-  // "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
 )
 
 // ivyXML := <dependencies>
