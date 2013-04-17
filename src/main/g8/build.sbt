@@ -26,14 +26,14 @@ scmInfo := Some(
 // organizationName := "My Company"
 
 /* scala versions and options */
-scalaVersion := "2.10.0"
+scalaVersion := "2.10.1"
 
 crossScalaVersions := Seq(
-  "2.9.3-RC1",
-  "2.9.2",
-  "2.9.1", "2.9.1-1",
+  "2.8.0", "2.8.1", "2.8.2",
   "2.9.0", "2.9.0-1",
-  "2.8.0", "2.8.1", "2.8.2"
+  "2.9.1", "2.9.1-1",
+  "2.9.2",
+  "2.9.3"
 )
 
 // These options will be used for *all* versions.
